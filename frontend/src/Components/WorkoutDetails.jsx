@@ -43,7 +43,6 @@ const WorkoutDetails = ({workout}) => {
             body: JSON.stringify(new_workout)
         })
         const json = response.json()
-        console.log(json)
         if(response.ok){
             dispatch({
                 type: 'UPDATE_WORKOUT',
