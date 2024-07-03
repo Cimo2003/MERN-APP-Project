@@ -18,12 +18,9 @@ const WorkoutsReducer = (state, action) =>{
                 workouts: state.workouts.filter((w)=> w._id !== action.payload._id)
             }
         case 'UPDATE_WORKOUT' :
-            console.log('UPDATE_WORKOUT action.payload:', action.payload)
-            console.log('Current state.workouts:', state.workouts)
             return {
                 workouts: state.workouts.map((w) => {
                     if(w._id === action.payload._id){ 
-                        console.log('Updating workout with _id:', w._id)
                         return action.payload}
                     return w
                 })
