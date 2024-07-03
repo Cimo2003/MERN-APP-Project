@@ -1,0 +1,132 @@
+
+.sign form{
+    display: grid;
+    width: 55vh;
+}
+.sign form h2{
+    font-size: 1.9em;
+    text-align: center;
+}
+.inputbox {
+    position: relative;
+    margin: 10px 0;
+    width: 55vh;
+}
+
+.inputbox label {
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+.light .inputbox label{
+    color: #222;
+    transition: .5s;
+}
+
+input:focus~label,
+input:valid~label{
+    top: 9px;
+    font-size: small;
+}
+.inputbox input {
+    box-shadow: inset .5px .5px 5px #f2f2f222;
+    background: #3b3b3b;
+    color: #f2f2f2;
+    border: none;
+    width: 95%;
+    height: 50px;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: .5s;
+}
+.light .inputbox input{
+    box-shadow: inset .5px .5px 5px #22222222;
+    background: #f2f2f2;
+    color: #222;
+    transition: .5s;
+}
+.inputbox ion-icon{
+    color: #f2f2f2;
+    position: absolute;
+    right: 8px;
+    top: 20px;
+    font-size: 1.3em;
+    transition: .5s;
+}
+.light .inputbox ion-icon{
+    color: #222;
+    transition: .5s;
+}
+.inputbox .material-symbols-outlined {
+    color: #f2f2f2;
+    position: absolute;
+    right: 8px;
+    top: 20px;
+    transition: .5s;
+}
+.light .inputbox .material-symbols-outlined {
+    color: #222;
+    transition: .5s;
+}
+.inputbox .material-symbols-outlined:hover{
+    cursor: pointer;
+    text-shadow: .1px .1px 20px #b4b4b4;
+}
+.agree,.forgot {
+    font-size: .9em;
+    display: flex;
+    justify-content: center;
+}
+.agree label, .forgot label {
+    margin-left: 5px;
+    
+}
+.agree a {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+.light .agree a{
+    color: black;
+    transition: .5s;
+}
+.forgot a {
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+}
+.light .forgot a {
+    color: black;
+    transition: .5s;
+}
+.agree a:hover, .forgot a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;
+    padding: 0 10px;
+    margin: 10px 0 40px 0;
+    box-shadow: .5px .5px 7px #f2f2f222;
+}
+.light .btn {
+    box-shadow: .5px .5px 7px #22222222;
+
+}
+.btn:hover{
+    background: #014638;
+    color: #f2f2f2;
+    transition: .2s;
+}
