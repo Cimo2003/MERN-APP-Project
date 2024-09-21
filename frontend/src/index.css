@@ -24,6 +24,10 @@ body{
   color: #222;
   transition: .5s;
 }
+.container.light input{
+  color: #222;
+  transition: .5s;
+}
 .navbar{
   position: sticky;
   top: 0;
@@ -172,6 +176,7 @@ h1 {
   border-bottom: 1px solid;
   background: transparent;
 }
+
 .workoutForm{
     margin: 0 0 0 150px;
     width: 40vh;

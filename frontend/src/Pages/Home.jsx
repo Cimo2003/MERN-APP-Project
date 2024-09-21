@@ -53,8 +53,8 @@ const Home = () => {
             {isLoading && <p style={{textAlign: 'center'}}>Loading...</p>}
             {error && <div style={{textAlign: 'center'}}>{error}</div>}
             {workouts && 
-                (workouts.length == 0 ?
-                    <div style={{textAlign: 'center'}}>there's no workouts, add a new one!</div> 
+                (workouts.length === 0 ?
+                    <div style={{textAlign: 'center'}}>there's no workouts, add a new one!</div>
                 :
                     workouts.map((workout)=>(
                         <div className={`workoutContainer ${theme ? 'light' : ''}`} key={workout._id}>

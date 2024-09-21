@@ -55,7 +55,7 @@ route.delete('/:id', async (req, res) => {
 //modify a workout
 route.patch('/:id', async (req, res) => {
     const {id} = req.params
-    const workout = await Workout.findByIdAndUpdate({_id: id}, {...req.body})
+    const workout = await Workout.findByIdAndUpdate({_id: id}, {...req.body}, { new: true})
     if(!workout) return res.status(404).json({error:'no such workout exists'})
     res.status(200).json(workout)
 

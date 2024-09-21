@@ -4,7 +4,7 @@ import { formatDistanceToNow } from "date-fns"
 import { AuthContext } from "../Context/AuthContext"
 
 const WorkoutDetails = ({workout}) => {
-    const {dispatch} = useContext(WorkoutsContext)
+    const {dispatch, workouts} = useContext(WorkoutsContext)
     const {user} = useContext(AuthContext)
     const [modify, setModify] = useState(false)
     const [title, setTitle] = useState(workout.title)
@@ -42,9 +42,9 @@ const WorkoutDetails = ({workout}) => {
             },
             body: JSON.stringify(new_workout)
         })
-        const json = response.json()
-        console.log(json)
+        
         if(response.ok){
+            const json = await response.json()
             dispatch({
                 type: 'UPDATE_WORKOUT',
                 payload: json
