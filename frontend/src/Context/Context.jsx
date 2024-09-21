@@ -19,10 +19,11 @@ const WorkoutsReducer = (state, action) =>{
             }
         case 'UPDATE_WORKOUT' :
             return {
-                ...state,
-                workouts: state.workouts.map((w) =>
-                    w._id === action.payload._id ? action.payload : w
-                ),
+                workouts: state.workouts.map((w) => {
+                    if(w._id === action.payload._id){ 
+                        return action.payload}
+                    return w
+                })
             }
         default:
             return state

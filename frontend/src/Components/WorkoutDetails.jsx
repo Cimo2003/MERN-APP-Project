@@ -42,7 +42,8 @@ const WorkoutDetails = ({workout}) => {
             },
             body: JSON.stringify(new_workout)
         })
-        
+        const json = await response.json()
+        console.log(json)
         if(response.ok){
             const json = await response.json()
             dispatch({
