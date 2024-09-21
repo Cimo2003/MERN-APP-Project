@@ -45,7 +45,7 @@ const NavBar = () => {
                 }
                 
                 <div id='toggle' className={theme ? 'light' : ''}>
-                    <i onClick={handleChange} className={`indicator ${isToggled ? 'active' : ''}`} ></i>
+                    <i onClick={handleChange} className={`indicator ${isToggled ? '' : 'active'}`} ></i>
                 </div>
             </div>
             

@@ -34,7 +34,7 @@ const WorkoutsContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(WorkoutsReducer, {
         workouts: null
     })
-    const [theme, setTheme] = useState(false)
+    const [theme, setTheme] = useState(true)
     return ( 
         <WorkoutsContext.Provider value={{...state, dispatch, theme, setTheme}}>
             {children}
